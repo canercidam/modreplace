@@ -84,7 +84,7 @@ func replace(path string, file *modfile.File) (string, string, bool) {
 func clone(repo *ClonedRepo) {
 	path := repo.Path
 	repoPath := replacementPath(path)
-	dotGitPath := path + "/.git"
+	dotGitPath := repoPath + "/.git"
 	os.MkdirAll(replacementPath(path), os.ModePerm)
 
 	cloneCmd := []string{"git", "clone"}

@@ -55,9 +55,7 @@ func replace(path string, file *modfile.File) (string, string, bool) {
 	version := foundRequired.Mod.Version
 
 	var foundReplacement *modfile.Replace
-	fmt.Println(file.Replace)
 	for _, replace := range file.Replace {
-		fmt.Println(replace.Old.Path, path)
 		if replace.Old.Path == path {
 			foundReplacement = replace
 			break
